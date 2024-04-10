@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Art Photography Collection</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="culture"> Cultural images </li>
+        <li class="buttons" data-filter="Travel"> Travel Images </li>
+        
+      
+    <div class="image-container">
+        <!-- culture -->
+        <a href="images/cat8/culture1.jpg" class="image culture">
+            <img src="images/cat8/culture1.jpg" alt="">
+        </a>
+        <a href="images/cat8/culture2.jpg" class="image culture">
+            <img src="images/cat8/culture2.jpg" alt="">
+        </a>
+        <a href="images/cat8/culture3.jpg" class="image culture">
+            <img src="images/cat8/culture3.jpg" alt="">
+        </a>
+        <a href="images/cat8/ice-cream4.jpg" class="image culture">
+            <img src="images/cat8/culture4.jpg" alt="">
+        </a>
+        <a href="images/cat8/culture5.jpg" class="image culture">
+            <img src="images/cat8/culture5.jpg" alt="">
+        </a>
+        <a href="images/cat8/culture6.jpg" class="image culture">
+            <img src="images/cat8/culture6.jpg" alt="">
+        </a>
+        <a href="images/cat8/culture7.jpg" class="image culture">
+            <img src="images/cat8/culture7.jpg" alt="">
+        </a>
+       
+
+        <!-- Travel-->
+        <a href="images/cat8/Travel1.jpg" class="image Travel">
+            <img src="images/cat8/Travel1.jpg" alt="">
+        </a>
+        <a href="images/cat8/Travel2.jpg" class="image Travel">
+            <img src="images/cat8/Travel2.jpg" alt="">
+        </a>
+        <a href="images/cat8/Travel3.jpg" class="image Travel">
+            <img src="images/cat8/Travel3.jpg" alt="">
+        </a>
+        <a href="images/cat8/Travel4.jpg" class="image Travel">
+            <img src="images/cat8/Travel4.jpg" alt="">
+        </a>
+        <a href="images/cat8/Travel5.jpg" class="image Travel">
+            <img src="images/cat8/Travel5.jpg" alt="">
+        </a>
+        <a href="images/cat8/Travel6.jpg" class="image Travel">
+            <img src="images/cat8/Travel6.jpg" alt="">
+        </a>
+        <a href="images/cat8/Travel7.jpg" class="image Travel">
+            <img src="images/cat8/Travel7.jpg" alt="">
+        </a>
+       
+        
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js">
+
+</script>
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<script>  
+$(document).ready(function(){
+
+$('.buttons').click(function(){
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+    var filter = $(this).attr('data-filter')
+
+    if(filter == 'all'){
+        $('.image').show(400);
+    }else{
+        $('.image').not('.'+filter).hide(200);
+        $('.image').filter('.'+filter).show(400);
+    }
+
+});
+
+$('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+        enabled:true
+    },
+    callbacks: {
+        buildControls: function() {
+            this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+        },
+        change: function() {
+            var currItem = this.currItem;
+            this.content.find('.mfp-title').remove();
+            $('<button class="mfp-download"><i class="fas fa-download"></i></button>').appendTo(this.contentContainer).on('click', function() {
+                var link = document.createElement('a');
+                link.href = currItem.src;
+                link.download = 'image.jpg';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+    }
+
+});
+
+});
+
+</script>
+        
+        
+    
+</body>
+</html>

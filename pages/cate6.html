@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macro Photography</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- Font Awesome CDN for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="Floral-Macro"> Floral Macro </li>
+        <li class="buttons" data-filter="Insect-Macro"> Insect Macro </li>
+        
+        
+      
+    <div class="image-container">
+        <!-- Floral-Macro -->
+        <a href="images/cat6/Floral-Macro1.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro1.jpg" alt="">
+        </a>
+        <a href="images/cat6/Floral-Macro2.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro2.jpg" alt="">
+        </a>
+        <a href="images/cat6/Floral-Macro3.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro3.jpg" alt="">
+        </a>
+        <a href="images/cat6/ice-cream4.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro4.jpg" alt="">
+        </a>
+        <a href="images/cat6/Floral-Macro5.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro5.jpg" alt="">
+        </a>
+        <a href="images/cat6/Floral-Macro6.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro6.jpg" alt="">
+        </a>
+        <a href="images/cat6/Floral-Macro7.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro7.jpg" alt="">
+        </a>
+        <a href="images/cat6/Floral-Macro8.jpg" class="image Floral-Macro">
+            <img src="images/cat6/Floral-Macro8.jpg" alt="">
+        </a>
+
+        <!-- Insect-Macro-->
+        <a href="images/cat6/Insect-Macro1.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro1.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro2.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro2.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro3.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro3.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro4.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro4.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro5.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro5.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro6.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro6.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro7.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro7.jpg" alt="">
+        </a>
+        <a href="images/cat6/Insect-Macro8.jpg" class="image Insect-Macro">
+            <img src="images/cat6/Insect-Macro8.jpg" alt="">
+        </a>
+    
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>  
+    $(document).ready(function(){
+    
+    $('.buttons').click(function(){
+    
+        $(this).addClass('active').siblings().removeClass('active');
+    
+        var filter = $(this).attr('data-filter')
+    
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+    
+    });
+    
+    $('.gallery').magnificPopup({
+    
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        },
+        callbacks: {
+            buildControls: function() {
+                this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+            },
+            change: function() {
+                var currItem = this.currItem;
+                this.content.find('.mfp-title').remove();
+                $('<button class="mfp-download"><i class="fas fa-download"></i></button>').appendTo(this.contentContainer).on('click', function() {
+                    var link = document.createElement('a');
+                    link.href = currItem.src;
+                    link.download = 'image.jpg';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
+        }
+    
+    });
+    
+    });
+    
+    </script>
+              
+</body>
+</html>

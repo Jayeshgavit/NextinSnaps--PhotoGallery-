@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black and White</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="Portraits"> Portraits </li>
+        <li class="buttons" data-filter="Landscapes"> Landscapes </li>
+        <li class="buttons" data-filter="Old-images">Old-images</li>
+        
+      
+    <div class="image-container">
+        <!-- Portraits -->
+        <a href="images/cat4/Portraits1.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits1.jpg" alt="">
+        </a>
+        <a href="images/cat4/Portraits2.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits2.jpg" alt="">
+        </a>
+        <a href="images/cat4/Portraits3.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits3.jpg" alt="">
+        </a>
+        <a href="images/cat4/ice-cream4.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits4.jpg" alt="">
+        </a>
+        <a href="images/cat4/Portraits5.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits5.jpg" alt="">
+        </a>
+        <a href="images/cat4/Portraits6.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits6.jpg" alt="">
+        </a>
+        <a href="images/cat4/Portraits7.jpg" class="image Portraits">
+            <img src="images/cat4/Portraits7.jpg" alt="">
+        </a>
+        <a href="images/cat4/Portraits8.jpg" class="image Portraits">
+            <img src="images/cat4/Animals8.jpg" alt="">
+        </a>
+
+        <!-- Landscapes-->
+        <a href="images/cat4/Landscapes1.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes1.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes2.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes2.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes3.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes3.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes4.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes4.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes5.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes5.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes6.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes6.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes7.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes7.jpg" alt="">
+        </a>
+        <a href="images/cat4/Landscapes8.jpg" class="image Landscapes">
+            <img src="images/cat4/Landscapes8.jpg" alt="">
+        </a>
+        <!-- Old images-->
+        <a href="images/cat4/Old-images10.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images10.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images2.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images2.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images3.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images3.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images4.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images4.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images5.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images5.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images6.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images6.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images7.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images7.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images8.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images8.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images9.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images9.jpg" alt="">
+        </a>
+        <a href="images/cat4/Old-images10.jpg" class="image Old-images">
+            <img src="images/cat4/Old-images10.jpg" alt="">
+        </a>
+    
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js">
+
+</script>
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+<script>  
+$(document).ready(function(){
+
+$('.buttons').click(function(){
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+    var filter = $(this).attr('data-filter')
+
+    if(filter == 'all'){
+        $('.image').show(400);
+    }else{
+        $('.image').not('.'+filter).hide(200);
+        $('.image').filter('.'+filter).show(400);
+    }
+
+});
+
+$('.gallery').magnificPopup({
+
+    delegate:'a',
+    type:'image',
+    gallery:{
+        enabled:true
+    },
+    callbacks: {
+        buildControls: function() {
+            this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+        },
+        change: function() {
+            var currItem = this.currItem;
+            this.content.find('.mfp-title').remove();
+            $('<button class="mfp-download"><i class="fas fa-download"></i></button>').appendTo(this.contentContainer).on('click', function() {
+                var link = document.createElement('a');
+                link.href = currItem.src;
+                link.download = 'image.jpg';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        }
+    }
+
+});
+
+});
+
+</script>
+        
+        
+    
+</body>
+</html>

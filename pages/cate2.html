@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape Photography</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</script>
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="City-Skylines"> City Skylines </li>
+        <li class="buttons" data-filter="Street-Scenes"> Street Scenes </li>
+        <li class="buttons" data-filter="Architecture-Highlights"> Architecture Highlights </li>
+        <li class="buttons" data-filter="Urban-Street-Art"> Urban Street Art </li>
+      
+    <div class="image-container">
+        <!-- City-Skylines -->
+        <a href="images/cat2/City-Skylines1.jpg" class="image City-Skylines">
+            <img src="images/cat2/City-Skylines1.jpg" alt="">
+        </a>
+        <a href="images/cat2/City-Skylines2.jpg" class="image City-Skylines">
+            <img src="images/cat2/City-Skylines2.jpg" alt="">
+        </a>
+        <a href="images/cat2/City-Skylines3.jpg" class="image City-Skylines">
+            <img src="images/cat2/City-Skylines3.jpg" alt="">
+        </a>
+        <a href="images/cat2/ice-cream4.jpg" class="image City-Skylines">
+            <img src="images/cat2/City-Skylines4.jpg" alt="">
+        </a>
+        <a href="images/cat2/City-Skylines5.jpg" class="image City-Skylines">
+            <img src="images/cat2/City-Skylines5.jpg" alt="">
+        </a>
+        <a href="images/cat2/City-Skylines6.jpg" class="image City-Skylines">
+            <img src="images/cat2/City-Skylines6.jpg" alt="">
+        </a>
+        <!-- Street-Scenes-->
+        <a href="images/cat2/Street-Scenes1.jpg" class="image Street-Scenes">
+            <img src="images/cat2/Street-Scenes1.jpg" alt="">
+        </a>
+        <a href="images/cat2/Street-Scenes2.jpg" class="image Street-Scenes">
+            <img src="images/cat2/Street-Scenes2.jpg" alt="">
+        </a>
+        <a href="images/cat2/Street-Scenes3.jpg" class="image Street-Scenes">
+            <img src="images/cat2/Street-Scenes3.jpg" alt="">
+        </a>
+        <a href="images/cat2/Street-Scenes4.jpg" class="image Street-Scenes">
+            <img src="images/cat2/Street-Scenes4.jpg" alt="">
+        </a>
+        <a href="images/cat2/Street-Scenes5.jpg" class="image Street-Scenes">
+            <img src="images/cat2/Street-Scenes5.jpg" alt="">
+        </a>
+        <a href="images/cat2/Street-Scenes6.jpg" class="image Street-Scenes">
+            <img src="images/cat2/Street-Scenes6.jpg" alt="">
+        </a>
+
+        <!-- Architecture-Highlights-->
+        <a href="images/cat2/Architecture-Highlights1.jpg" class="image Architecture-Highlights">
+            <img src="images/cat2/Architecture-Highlights1.jpg" alt="">
+        </a>
+        <a href="images/cat2/Architecture-Highlights2.jpg" class="image Architecture-Highlights">
+            <img src="images/cat2/Architecture-Highlights2.jpg" alt="">
+        </a>
+        <a href="images/cat2/Architecture-Highlights3.jpg" class="image Architecture-Highlights">
+            <img src="images/cat2/Architecture-Highlights3.jpg" alt="">
+        </a>
+        <a href="images/cat2/Architecture-Highlights4.jpg" class="image Architecture-Highlights">
+            <img src="images/cat2/Architecture-Highlights4.jpg" alt="">
+        </a>
+        <a href="images/cat2/Architecture-Highlights5.jpg" class="image Architecture-Highlights">
+            <img src="images/cat2/Architecture-Highlights5.jpg" alt="">
+        </a>
+        <a href="images/cat2/Architecture-Highlights6.jpg" class="image Architecture-Highlights">
+            <img src="images/cat2/Architecture-Highlights6.jpg" alt="">
+        </a>
+
+        <!-- forest  -->
+        <a href="images/cat2/Urban-Street-Art1.jpg" class="image Urban-Street-Art">
+            <img src="images/cat2/Urban-Street-Art1.jpg" alt="">
+        </a>
+        <a href="images/cat2/Urban-Street-Art2.jpg" class="image Urban-Street-Art">
+            <img src="images/cat2/Urban-Street-Art2.jpg" alt="">
+        </a>
+        <a href="images/cat2/Urban-Street-Art3.jpg" class="image Urban-Street-Art">
+            <img src="images/cat2/Urban-Street-Art3.jpg" alt="">
+        </a>
+        <a href="images/cat2/Urban-Street-Art4.jpg" class="image Urban-Street-Art">
+            <img src="images/cat2/Urban-Street-Art4.jpg" alt="">
+        </a>
+        <a href="images/cat2/Urban-Street-Art5.jpg" class="image Urban-Street-Art">
+            <img src="images/cat2/Urban-Street-Art5.jpg" alt="">
+        </a>
+        <a href="images/cat2/Urban-Street-Art6.jpg" class="image Urban-Street-Art">
+            <img src="images/cat2/Urban-Street-Art6.jpg" alt="">
+        </a>     
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>  
+    $(document).ready(function(){
+    
+    $('.buttons').click(function(){
+    
+        $(this).addClass('active').siblings().removeClass('active');
+    
+        var filter = $(this).attr('data-filter')
+    
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+    
+    });
+    
+    $('.gallery').magnificPopup({
+    
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        },
+        callbacks: {
+            buildControls: function() {
+                this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+            },
+            change: function() {
+                var currItem = this.currItem;
+                this.content.find('.mfp-title').remove();
+                $('<button class="mfp-download"><i class="fas fa-download"></i></button>').appendTo(this.contentContainer).on('click', function() {
+                    var link = document.createElement('a');
+                    link.href = currItem.src;
+                    link.download = 'image.jpg';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
+        }
+    
+    });
+    
+    });
+    
+    </script>
+    
+</body>
+</html>

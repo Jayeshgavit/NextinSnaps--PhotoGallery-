@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape Photography</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+     <!-- Font Awesome CDN for icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+<div class="gallery">
+
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="mountains"> Mountains </li>
+        <li class="buttons" data-filter="Skyline-Beauty"> Skyline-Beauty </li>
+        <li class="buttons" data-filter="Lakeside-Landscapes"> Lakeside-Landscapes </li>
+        <li class="buttons" data-filter="Forest-Landscapes"> Forest-Landscapes </li>
+      
+    <div class="image-container">
+        <!-- Mountains -->
+        <a href="images/cat1/mountains1.jpg" class="image mountains">
+            <img src="images/cat1/mountains1.jpg" alt="">
+        </a>
+        <a href="images/cat1/mountains2.jpg" class="image mountains">
+            <img src="images/cat1/mountains2.jpg" alt="">
+        </a>
+        <a href="images/cat1/mountains3.jpg" class="image mountains">
+            <img src="images/cat1/mountains3.jpg" alt="">
+        </a>
+        <a href="images/cat1/ice-cream4.jpg" class="image mountains">
+            <img src="images/cat1/mountains4.jpg" alt="">
+        </a>
+        <a href="images/cat1/mountains5.jpg" class="image mountains">
+            <img src="images/cat1/mountains5.jpg" alt="">
+        </a>
+        <a href="images/cat1/mountains6.jpg" class="image mountains">
+            <img src="images/cat1/mountains6.jpg" alt="">
+        </a>
+        <!-- skyline-->
+        <a href="images/cat1/Skyline-Beauty1.jpg" class="image Skyline-Beauty">
+            <img src="images/cat1/Skyline-Beauty1.jpg" alt="">
+        </a>
+        <a href="images/cat1/Skyline-Beauty2.jpg" class="image Skyline-Beauty">
+            <img src="images/cat1/Skyline-Beauty2.jpg" alt="">
+        </a>
+        <a href="images/cat1/Skyline-Beauty3.jpg" class="image Skyline-Beauty">
+            <img src="images/cat1/Skyline-Beauty3.jpg" alt="">
+        </a>
+        <a href="images/cat1/Skyline-Beauty4.jpg" class="image Skyline-Beauty">
+            <img src="images/cat1/Skyline-Beauty4.jpg" alt="">
+        </a>
+        <a href="images/cat1/Skyline-Beauty5.jpg" class="image Skyline-Beauty">
+            <img src="images/cat1/Skyline-Beauty5.jpg" alt="">
+        </a>
+        <a href="images/cat1/Skyline-Beauty6.jpg" class="image Skyline-Beauty">
+            <img src="images/cat1/Skyline-Beauty6.jpg" alt="">
+        </a>
+
+        <!-- Lakeside -->
+        <a href="images/cat1/Lakeside-Landscapes1.jpg" class="image Lakeside-Landscapes">
+            <img src="images/cat1/Lakeside-Landscapes1.jpg" alt="">
+        </a>
+        <a href="images/cat1/Lakeside-Landscapes2.jpg" class="image Lakeside-Landscapes">
+            <img src="images/cat1/Lakeside-Landscapes2.jpg" alt="">
+        </a>
+        <a href="images/cat1/Lakeside-Landscapes3.jpg" class="image Lakeside-Landscapes">
+            <img src="images/cat1/Lakeside-Landscapes3.jpg" alt="">
+        </a>
+        <a href="images/cat1/Lakeside-Landscapes4.jpg" class="image Lakeside-Landscapes">
+            <img src="images/cat1/Lakeside-Landscapes4.jpg" alt="">
+        </a>
+        <a href="images/cat1/Lakeside-Landscapes5.jpg" class="image Lakeside-Landscapes">
+            <img src="images/cat1/Lakeside-Landscapes5.jpg" alt="">
+        </a>
+        <a href="images/cat1/Lakeside-Landscapes6.jpg" class="image Lakeside-Landscapes">
+            <img src="images/cat1/Lakeside-Landscapes6.jpg" alt="">
+        </a>
+
+        <!-- forest  -->
+        <a href="images/cat1/Forest-Landscapes1.jpg" class="image Forest-Landscapes">
+            <img src="images/cat1/Forest-Landscapes1.jpg" alt="">
+        </a>
+        <a href="images/cat1/Forest-Landscapes2.jpg" class="image Forest-Landscapes">
+            <img src="images/cat1/Forest-Landscapes2.jpg" alt="">
+        </a>
+        <a href="images/cat1/Forest-Landscapes3.jpg" class="image Forest-Landscapes">
+            <img src="images/cat1/Forest-Landscapes3.jpg" alt="">
+        </a>
+        <a href="images/cat1/Forest-Landscapes4.jpg" class="image Forest-Landscapes">
+            <img src="images/cat1/Forest-Landscapes4.jpg" alt="">
+        </a>
+        <a href="images/cat1/Forest-Landscapes5.jpg" class="image Forest-Landscapes">
+            <img src="images/cat1/Forest-Landscapes5.jpg" alt="">
+        </a>
+        <a href="images/cat1/Forest-Landscapes6.jpg" class="image Forest-Landscapes">
+            <img src="images/cat1/Forest-Landscapes6.jpg" alt="">
+        </a>     
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>  
+    $(document).ready(function(){
+    
+    $('.buttons').click(function(){
+    
+        $(this).addClass('active').siblings().removeClass('active');
+    
+        var filter = $(this).attr('data-filter')
+    
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+    
+    });
+    
+    $('.gallery').magnificPopup({
+    
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        },
+        callbacks: {
+            buildControls: function() {
+                this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+            },
+            change: function() {
+                var currItem = this.currItem;
+                this.content.find('.mfp-title').remove();
+                $('<button class="mfp-download"><i class="fas fa-download"></i></button>').appendTo(this.contentContainer).on('click', function() {
+                    var link = document.createElement('a');
+                    link.href = currItem.src;
+                    link.download = 'image.jpg';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
+        }
+    
+    });
+    
+    });
+    
+    </script>
+        
+        
+</body>
+</html>
